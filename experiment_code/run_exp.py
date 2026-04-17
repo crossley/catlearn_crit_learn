@@ -13,8 +13,10 @@ from consent import *
 from instructions import *
 from messages import *
 
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+
 # NOTE: SET THIS BEFORE RUNNING THE EXPERIMENT
-sub_num = 2
+sub_num = 999999
 
 data_dir = '../data'
 stimuli_dir = '../stimuli'
@@ -69,7 +71,8 @@ stim_ind_current_prob = np.arange(0, num_stim, 1)
 np.random.shuffle(stim_ind_current_prob)
 
 # setup grating stimuli
-num_bins = 6
+# num_bins = 6
+num_bins = 2 # demo
 bin_width = 100 // num_bins
 bin_bounds = np.arange(0, 100, bin_width)
 bins = np.zeros((num_bins, 2))
@@ -125,6 +128,12 @@ while current_trial_exp < max_trials_exp:
         t_iti = 3.5
         t_fb_delay = 0.5
         t_fb_dur = 1.0
+        
+    # for demo
+    t_iti = 1.0
+    t_fb_delay = 0.5
+    t_fb_dur = 1.0
+    condition[prob_num, 1] = 'grating'
 
     # iti
     fixation.draw()
@@ -150,6 +159,7 @@ while current_trial_exp < max_trials_exp:
         x2 = np.random.uniform(lb2, ub2)
         x = np.random.choice([x1, x2])
         y = np.mean(x_range)
+        y = 2*x # demo
         [xt, yt] = TransformStim(np.array([x]), np.array([y]))
 
         current_stim = visual.GratingStim(win,

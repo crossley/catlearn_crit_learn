@@ -1,0 +1,2 @@
+sub_num,condition_timing,condition_stim,stim_id,cat,resp,rt,age,gender,date,prob_num,prob_num_grating,prob_num_binary,num_problems_solved,current_trial_prob,current_trial_stim,current_trial_exp,relevant_dim,x,y,xc
+999999,delay,grating,50,2,1,2.477472929051146,,Prefer not to specify,2021-06-21,0,0,0,0,0,0,0,3,0.28059004611230387,0.5611800922246077,0.0

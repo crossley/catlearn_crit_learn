@@ -11,7 +11,7 @@ import sys
 
 # allocate window and graphics
 win = visual.Window(
-    size=(1920, 1080),
+    size=(1920/1.5, 1080/1.5),
     fullscr=True,
     # fullscr=False,
     screen=0,

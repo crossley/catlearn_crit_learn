@@ -3,7 +3,7 @@ library(ggplot2)
 
 rm( list = ls())
 
-d = fread('../data/data_sub_2.csv')
+d = fread('../data/data_sub_1.csv')
 
 d[, t2c := max(current_trial_prob),
   .(sub_num, condition_timing, condition_stim, prob_num)]
